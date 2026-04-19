@@ -1,0 +1,73 @@
+  <!doctype html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <!-- <meta http-equiv="Content-Security-Policy"
+        content="
+        default-src 'self';
+        connect-src 'self' https://*.supabase.co wss://*.supabase.co;
+        script-src 'self' 'unsafe-inline' https://unpkg.com https://cdn.jsdelivr.net;
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src https://fonts.gstatic.com;
+        img-src 'self' data:;
+        frame-src https://www3.cbox.ws;
+        worker-src 'self' blob:;
+      "> -->
+      <link rel="icon" href="assets/spade_logo_filled.png" type="image/gif" />
+      <link
+        href="https://fonts.googleapis.com/css?family=Pixelify+Sans"
+        rel="stylesheet"
+      />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Spades' Place</title>
+      <link rel="stylesheet" href="css/styles.css" />
+      <link rel="stylesheet" href="css/signup.css" />
+      <link rel="stylesheet" href="css/profile.css" />
+    </head>
+    <body>
+      <div class="bg-overlay">
+        <img src="assets/toast.png" alt="Toast" id="bouncing-toast"/>
+        <div class="updates">
+          <div class="post">
+            <h class="updates-header">
+              About
+            </h> 
+            <p>
+              Welcome to my site landing page, i'm spades. neocities was restricting CORS, so i had to use netlify for the main site, but hey at least the public piano works.   
+            </p>
+          </div>
+        </div>
+        <div class="box-container">
+          <div class="box cafe infinitebouncehover" onclick="handleIconClick('cafe')">
+            <div class="header">
+              <img src="assets/cafe.svg" alt="Cafe">
+              <span>Cafe</span>
+            </div>
+            <div class="description">
+              <p>Go to the cafe, with a working public midi piano and chatroom. also has a blog and tutorials. (basically it's the main site)</p>
+            </div>
+          </div>
+
+          <div class="box portfolio infinitebouncehover" onclick="handleIconClick('portfolio')">
+            <div class="header">
+              <img src="assets/portfolio.svg" alt="Portfolio">
+              <span>Portfolio</span>
+            </div>
+            <div class="description">
+              <p>My portfolio, it has a cool piano nav menu.</p>
+            </div>
+          </div>
+        </div>
+        <button id="toggle-toast-btn" onclick="toggleToast()" class="toggle-toast active" aria-pressed="true">
+          <img src="assets/toast.png" alt="Toggle Toast">
+        </button>
+        <a id="neocities-btn" href="https://spades-place.neocities.org"
+              target="_blank" class="neocities-btn">
+          <img src="assets/button.gif" alt="neocities button">
+          <div class="button-text">get my button ^</div>
+        </a>
+        <script src="js/bouncingToast.js"></script>
+      </div>
+      <script src="js/script.js"></script>
+    </body>
+  </html>
