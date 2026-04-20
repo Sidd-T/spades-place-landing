@@ -3,18 +3,6 @@ function handleIconClick(icon) {
     case 'cafe':
       window.open("https://spades-place.netlify.app/", "_blank");
       break;
-    case 'blog':
-      // Add code for blog action
-      console.log('Blog icon clicked');
-      break;
-    case 'links':
-      // Add code for links action
-      console.log('Links icon clicked');
-      break;
-    case 'tutorials':
-      // Add code for tutorials action
-      console.log('Tutorials icon clicked');
-      break;
     case 'portfolio':
       window.open("https://portfolio-n510.vercel.app/", "_blank");
       break;
@@ -38,3 +26,17 @@ function toggleToast() {
     button.setAttribute('aria-pressed', 'false');
   }
 }
+
+// Zoom effect on load
+document.addEventListener('DOMContentLoaded', function() {
+  const bgOverlay = document.querySelector('.bg-overlay');
+  const enterOverlay = document.getElementById('enter-overlay');
+  const enterText = document.getElementById('enter-text');
+
+  // On click enter, zoom out
+  enterText.addEventListener('click', function() {
+    bgOverlay.style.transform = 'scale(1)';
+    bgOverlay.style.transformOrigin = 'center center';
+    enterOverlay.style.display = 'none';
+  });
+});

@@ -28,7 +28,6 @@ function animate() {
   y += dirY * speed;
   toast.style.left = x + "px";
   toast.style.top = y + "px";
-  console.log(y);
   window.requestAnimationFrame(animate);
 }
 

@@ -37,6 +37,9 @@ body {
   background-repeat:no-repeat;
   background-size:cover;
   z-index: 5000;
+  transition: transform 1s ease, transform-origin 1s ease;
+  transform: scale(1.7);
+  transform-origin: 20% 5%;
 }
 
 .box-container {
@@ -240,4 +243,115 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-smooth: never;
   image-rendering: pixelated;
+}
+
+#enter-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  pointer-events: none;
+}
+
+#enter-text {
+  font-size: 5rem;
+  color: var(--off-white);
+  background:#21252863;
+  cursor: pointer;
+  pointer-events: auto;
+  font-family: "Pixelify Sans", sans-serif;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: never;
+  image-rendering: pixelated;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: color 0.3s ease;
+}
+
+#enter-text:hover {
+  color: white;
+}
+
+.img-floatinganim {
+    animation-name: floating; 
+    animation-duration: 3s; 
+    animation-iteration-count: infinite; 
+    animation-timing-function: ease-in-out;
+  } 
+
+  @keyframes floating {
+  0% { 
+    transform: translate(0,  0px); 
+  } 
+
+  50%  { 
+    transform: translate(0, 15px); 
+  } 
+
+  100%   {
+    transform: translate(0, -0px); 
+  } 
+}     
+
+
+@media (max-width: 1050px) {
+  .updates {
+    background:#21252871;
+    border-radius: 5px;
+    padding: 10px 10px;
+  }
+
+}
+/* Responsive design */
+@media (max-width: 1050px) {
+  .updates {
+    top: 15%;
+    left: 70%;
+  }
+
+  .neocities-btn {
+    padding-left: 20%;
+  }
+
+  .toggle-toast {
+    padding-right: 20%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .updates {
+    top: 15%;
+    left: 70%;
+  }
+}
+
+@media (max-width: 1300px) {
+  .box-container {
+    bottom: 15%;
+    width: 90%;
+    height: 30%;
+    scale: 0.90;
+    padding-right: 10%;
+  }
+
+  .updates {
+    scale: 0.90;
+  }
+
+  .toggle-toast {
+    scale: 1.5;
+    bottom: 15%;
+  }
+
+  .neocities-btn {
+    scale: 1.5;
+    bottom: 15%;
+  }
 }
