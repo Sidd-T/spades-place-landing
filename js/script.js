@@ -4,7 +4,7 @@ function handleIconClick(icon) {
       window.open("https://spades-place.netlify.app/", "_blank");
       break;
     case 'portfolio':
-      window.open("https://portfolio-n510.vercel.app/", "_blank");
+      window.open("https://portfolio-of-spades.vercel.app/", "_blank");
       break;
     default:
       console.log('Unknown icon clicked');
